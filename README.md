@@ -54,7 +54,7 @@ GPU generation defaults to 24 offloaded layers and prefers a dedicated GPU. The 
 Download/extract the repository,or  open a terminal **inside its project folder**, and run:
 
 ```sh
-git clone https://github.com/forthecentury3/densecast.git
+git clone https://github.com/ivangustakov/densecast
 cd densecast
 npm ci
 npm test
