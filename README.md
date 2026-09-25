@@ -58,12 +58,12 @@ node --version
 npm --version
 npm ci
 npm test
-npm start
+npm run download-model
 ```
 
 `npm ci` installs from the included lockfile; it may take several minutes because QVAC includes native runtimes. Do not omit optional dependencies or copy `node_modules` from another operating system. There is no separate Python worker install step for this JavaScript app.
 
-During installation, leave `npm start` running and open http://127.0.0.1:3000. Choose **Try the included systems analysis chapter**, then click **Synthesize podcast** once. This downloads and caches the QVAC models ahead of regular use; the first generation can take many minutes. Stop the server with **Ctrl+C** after the sample finishes.
+`npm run download-model` downloads and caches the Qwen3 8B Q4_K_M model (about 4.68 GiB) before the web server starts. Wait for `Qwen3 8B is cached` before running `npm start`; this prevents the first server request from timing out while the large model is downloading. The smaller embedding and voice models download on the first podcast generation.
 
 `doctor` should finish with `PASS: worker RPC handshake completed`. It verifies installed functions and native worker startup, not the full model pipeline. The startup allowance is 120 seconds. If it fails, use the underlying error printed below the timeout to choose the relevant troubleshooting step.
 
