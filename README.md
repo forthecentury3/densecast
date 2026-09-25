@@ -184,23 +184,7 @@ PORT=3001 npm start
 
 Open the exact local URL printed in the terminal. Do not expose this local prototype to the public internet.
 
-## Bounty submission checklist
 
-The supplied bounty requirements include actions outside building this app. **Approval is decided by the bounty reviewer and is not guaranteed.** This project provides the pinned SDK, real on-device function calls, README, original implementation, and MIT license. Before submitting, you still need to:
-
-- Publish your own public GitHub repository with the source, `package-lock.json`, README, and license. Exclude `.data`, `node_modules`, and private textbook files.
-- Create **at least three genuine commits authored by you**, reflecting your actual work. No commits or pushes were made as part of preparing this workspace.
-- Capture a screenshot or short recording of a successful run showing AI output. Do not present test fixtures or a mock as inference evidence.
-- Post on X with your public repository link and tag **@qvac**.
-- Submit your repo URL, X post URL, screenshot/recording, and a short app description.
-
-Suggested description:
-
-> Densecast turns a dense textbook chapter into a two-speaker study podcast entirely on-device. It uses QVAC 0.19.1 `loadModel`, `ragIngest`, `ragSearch`, `completion`, and `textToSpeech`, with Qwen3 8B and Supertonic 3.
-
-### A truthful 15-second demo
-
-Download the models and complete a test first. Record dropping a text-heavy PDF and clicking Synthesize (0–4 s), cut to the real generation progress with a visible “time elapsed” label (4–7 s), then play the completed audio while the transcript highlights (7–15 s). Keep a source reference and the model information visible. Generation is not claimed to finish in 15 seconds. A screenshot of the completed player and transcript also satisfies the supplied screenshot-or-recording requirement.
 
 ## Project layout
 
