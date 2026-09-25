@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Turn a dense chapter into a two-voice study podcast, entirely on your device.">
+  <title>Densecast · From page to conversation</title>
+  <link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/" aria-label="Densecast home"><span class="brand-icon" aria-hidden="true">▥</span> densecast<span class="brand-dot">.</span></a><div class="local"><span class="status-dot"></span> ON-DEVICE STUDIO</div><span class="sdk">Powered by QVAC</span></header>
+  <main>
+    <section class="intro"><div class="eyebrow">LESS READING FATIGUE. MORE UNDERSTANDING.</div><h1>Dense pages.<br><em>Clear conversations.</em></h1><p>Turn your textbook chapter into a conversation worth listening to.<br>Two voices, grounded in your material. All on your device.</p></section>
+    <div class="workspace">
+      <section class="panel input-panel" aria-labelledby="source-heading">
+        <div class="panel-heading"><span class="step-number">01</span><h2 id="source-heading">Your source material</h2></div>
+        <label class="dropzone" id="dropzone" for="file"><span class="document-icon" aria-hidden="true">↥</span><strong id="file-name">Drop a chapter here</strong><span id="file-detail">or click to choose a file</span><small>PDF or TXT · up to 30 MB / 40 pages</small><input id="file" type="file" accept=".pdf,.txt,application/pdf,text/plain"></label>
+        <button class="sample-button" id="sample">Try the included systems analysis chapter <span>↗</span></button>
+        <div class="divider"></div>
+        <div class="section-label">MEET YOUR HOSTS</div><div class="hosts"><div class="host"><span class="avatar maya">M</span><span><strong>Maya</strong><small>The curious one · F1</small></span></div><div class="host"><span class="avatar leo">L</span><span><strong>Leo</strong><small>The explainer · M1</small></span></div></div>
+        <div class="model-card"><span class="model-icon">✳</span><div><strong>Big ideas need a capable model.</strong><p>Qwen3 8B · 4.68 GiB<br>Supertonic 3 · two distinct voices</p></div></div>
+        <button id="synthesize" class="primary" disabled><span>✦</span> Synthesize podcast <span>→</span></button>
+        <p class="fineprint">First run downloads ~5.4 GB of models. Generation can take several minutes. No API key or cloud inference.</p>
+      </section>
+      <section class="panel studio" aria-labelledby="studio-heading">
+        <div class="panel-heading"><span class="step-number">02</span><h2 id="studio-heading">The listening room</h2><span id="studio-badge" class="badge">AWAITING CHAPTER</span></div>
+        <div id="empty" class="empty"><div class="empty-record" aria-hidden="true"><div>▥</div></div><h3>A little less textbook.<br>A little more back-and-forth.</h3><p>Your conversation and synced transcript<br>will appear here.</p><div class="empty-tags"><span>2 speakers</span><span>Source references</span><span>100% local inference</span></div></div>
+        <div id="progress-panel" hidden><div class="progress-title"><strong id="progress-message">Starting…</strong><span id="progress-value">0%</span></div><progress id="progress" max="100" value="0"></progress><ol class="stages"><li data-stage="read">Read</li><li data-stage="index">Index</li><li data-stage="write">Write</li><li data-stage="voice">Voice</li></ol><p id="source-detail" class="muted"></p><p id="elapsed" class="muted"></p></div>
+        <div id="error" class="error" role="alert" hidden></div>
+        <div id="episode" hidden><div class="eyebrow episode-eyebrow">YOUR CHAPTER, IN CONVERSATION</div><h3 id="episode-title"></h3><p id="episode-meta" class="muted"></p><canvas id="waveform" aria-label="Audio waveform" role="img"></canvas><audio id="audio" controls preload="metadata"></audio><div class="exports"><a id="download-audio" download>↓ Download audio</a><a id="download-transcript" download>Transcript JSON</a><a id="download-vtt" download>Captions VTT</a></div></div>
+        <div id="transcript-panel" hidden><div class="transcript-heading"><h3>Follow the conversation</h3><span id="sync-label">TRANSCRIPT</span></div><div id="transcript" class="transcript"></div><p class="transcript-note">AI study aid. Check key claims against the cited source pages, especially equations and proofs.</p></div>
+      </section>
+    </div>
+    <footer><span><span class="status-dot"></span> Your chapter stays on this computer.</span><span>Made for the moments between lectures.</span></footer>
+  </main>
+</body>
+</html>
