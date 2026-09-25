@@ -1,0 +1,23 @@
+SYSTEMS ANALYSIS: FROM NEEDS TO A TESTABLE DESIGN
+
+Systems analysis studies an existing situation, identifies stakeholders' needs, and defines what a proposed information system must achieve. Design describes how a solution will meet those needs. The distinction matters: deciding that a library must track overdue loans is analysis; choosing a database schema and reminder interface is design.
+
+A stakeholder is someone who affects or is affected by the system. For a university library, stakeholders include borrowers, librarians, administrators, and accessibility staff. Interviews reveal individual perspectives. Observation can uncover workarounds that people forget to mention. Questionnaires reach more people but often provide less context. An analyst combines methods and checks interpretations with stakeholders instead of treating a single interview as complete evidence.
+
+Functional requirements state behavior. A library system might record a loan, renew an eligible loan, and show a borrower's current loans. Quality requirements constrain how well the system works. Saying that the system must be fast is ambiguous. A testable requirement states the operation, workload, and threshold: for example, return a catalogue search within two seconds for at least ninety-five percent of requests under an agreed workload. This is an illustrative target, not a universal rule.
+
+A use case describes an actor pursuing a goal through interactions with the system. It identifies a normal sequence, alternative paths, and preconditions. For renewing a loan, an alternative path might reject renewal when another borrower has reserved the item. A use case is about externally visible behavior, not a list of database implementation steps.
+
+Data flow diagrams show processes, external entities, data stores, and movements of data. They describe transformations of information rather than execution order or interface layout. A context diagram treats the whole system as one process and makes its boundary visible. More detailed diagrams decompose that process while preserving the meaning of external inputs and outputs.
+
+An entity relationship model describes the structure of stored data. A library can distinguish Book, Copy, Borrower, and Loan. Book describes a title or edition, while Copy describes a physical item. Each Loan links one Copy to one Borrower for a period. A borrower can have many loans over time, and a copy can have many historical loans, even though it should have at most one active loan at a time. Cardinality alone does not necessarily capture that time-dependent business rule.
+
+Feasibility analysis examines whether a proposed solution is practical. Technical feasibility asks whether the technology and skills are available. Economic feasibility compares expected costs and benefits. Operational feasibility considers whether the organization can adopt and use the system. Schedule feasibility asks whether the work fits the available time. A technically possible solution can still be unsuitable if training costs or delivery dates are unacceptable.
+
+Requirements change as understanding improves. A traceability table links each requirement to its source, design element, and acceptance test. When a policy changes, these links help identify what may need revision. Traceability supports impact analysis; it does not automatically guarantee that every requirement is correct.
+
+Validation asks whether the proposed requirements represent stakeholder needs. Verification checks whether a work product satisfies its stated specification. Reviewing a prototype with librarians can reveal that an assumed workflow is wrong. Checking that a design implements an approved renewal rule addresses a different question. Both activities are useful, and neither replaces the other.
+
+The practical lesson is to connect needs, models, decisions, and tests. Clear boundaries prevent scope confusion. Testable requirements make success observable. Models reveal different aspects of the same system, and inconsistencies between models are clues to investigate. A polished diagram alone is not evidence that stakeholders' needs have been met.
+
+This original short teaching sample is included with Densecast under the project's MIT license.
