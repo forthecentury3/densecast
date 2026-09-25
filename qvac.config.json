@@ -1,0 +1,8 @@
+{
+  "loggerConsoleOutput": true,
+  "loggerLevel": "warn",
+  "rpcInitTimeoutMs": 120000,
+  "httpConnectionTimeoutMs": 1800000,
+  "registryDownloadMaxRetries": 3,
+  "registryStreamTimeoutMs": 180000
+}
